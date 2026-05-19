@@ -54,8 +54,6 @@ func NewMojangApi(
 func (s *MojangApi) DefineRoutes(r gin.IRouter) {
 	// https://sessionserver.mojang.com/session/minecraft/profile/:uuid
 	r.GET("/session/minecraft/profile/:uuid", s.getProfileByUuidHandler)
-	// https://api.minecraftservices.com/minecraft/profile/lookup/:uuid
-	r.GET("/minecraft/profile/lookup/:uuid", s.getProfileByUuidHandler)
 
 	// https://api.mojang.com/users/profiles/minecraft/:username
 	r.GET("/users/profiles/minecraft/:username", s.getUuidByUsernameHandler)
